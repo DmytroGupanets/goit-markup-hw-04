@@ -4,6 +4,7 @@
   --main-white-color: #ffffff;
   --main-accent-color: #2196f3;
   --grey-color: #f5f4fa;
+  --main-icon-color: #afb1b8;
 }
 
 * h1,
@@ -36,6 +37,10 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.list {
+  list-style: none;
 }
 
 /* Standart section paddings */
@@ -76,6 +81,10 @@ body {
 }
 
 /* Navigation section */
+.site-nav .link.current {
+  color: var(--main-accent-color);
+}
+
 .main-nav {
   margin-left: 93px;
   align-self: center;
@@ -101,6 +110,7 @@ body {
 }
 
 .contacts-list {
+  display: inline-flex;
   align-self: center;
   margin-left: auto;
 }
@@ -110,6 +120,9 @@ body {
 }
 
 .contacts {
+  display: inline-flex;
+  align-items: center;
+
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -123,12 +136,28 @@ body {
   color: var(--main-accent-color);
 }
 
-.site-nav .link.current {
-  color: var(--main-accent-color);
+.icon-envelope {
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
-.list {
-  list-style: none;
+.icon-envelope:hover,
+.icon-envelope:focus {
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  fill: currentColor;
 }
 
 /* Герой */
@@ -137,6 +166,19 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero.jpg);
 }
 
 .hero-title {
@@ -170,6 +212,16 @@ body {
 }
 
 /* Особенности */
+
+.icon-features {
+  display: block;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--grey-color);
+  border-radius: 4px;
+}
 
 .features-list.list {
   display: flex;
@@ -254,21 +306,87 @@ body {
 }
 
 .our-team-position {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
 
   text-align: center;
 }
 
+.social-contact.list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-contact-item:nth-child(-n + 3) {
+  margin-right: 10px;
+}
+
+.link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--main-icon-color);
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  border: hidden;
+}
+
+.link-icon:hover,
+.link-icon:focus {
+  background-color: var(--main-accent-color);
+  fill: var(--main-white-color);
+}
+
+/* Our clients section */
+.clients.list {
+  display: flex;
+}
+
+.company-item:nth-child(-n + 5) {
+  margin-right: 30px;
+}
+
+.company.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 72px;
+  fill: var(--main-icon-color);
+
+  border: 1px solid var(--main-icon-color);
+  border-radius: 4px;
+}
+
+.company.link:hover,
+.company.link:focus {
+  border-color: var(--main-accent-color);
+  fill: var(--main-accent-color);
+}
+
 /* Footer section */
 
 footer {
-  background-color: #2f303a; /* Временный фон для того чтобы был виден текст */
+  background-color: #2f303a;
 }
 
 .footer-section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.about-us {
+  margin-right: 70px;
 }
 
 .logo-footer {
@@ -301,6 +419,36 @@ footer {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--main-white-color);
+}
+
+/* JOIN US SECTION */
+
+.join-us-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--main-white-color);
+}
+
+.icon-join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--main-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: hidden;
+}
+
+.icon-join:hover,
+.icon-join:focus {
+  background-color: var(--main-accent-color);
 }
 
 /* -------------------------Страница портфолио------------------------------ */

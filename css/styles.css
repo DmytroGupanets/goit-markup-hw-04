@@ -354,14 +354,14 @@ body {
 /* Our clients section */
 .clients.list {
   display: flex;
-
+  flex-wrap: wrap;
   margin-right: -30px;
 }
 
 .company-item {
   margin-right: 30px;
 
-  flex-basis: calc((100% - 150px) / 5);
+  flex-basis: calc((100% - 180px) / 6);
 }
 
 .company.link {
